@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GetEvenNumber</title>
+        <style>
+            body{
+                margin: 0%;
+                padding: 0%;
+                background-color: rgb(198, 186, 186);
+            }
+            section{
+                height: 90vh;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            input{ 
+                padding: 10px;
+				border-radius: 5px;
+				outline: none;
+				border: 1px solid white;
+            }
+			button{
+				margin-left: 5px;
+				background-color: red;
+				color: white;
+				 padding: 10px;
+				border-radius: 5px;
+				outline: none;
+				border: 1px solid white;
+			}
+
+        </style>
+		<script>
+			function VerifyClick() {
+				var txtEven = document.getElementById('txtEven').value;
+				var lblError = document.getElementById('lblError');
+				if (parseInt(txtEven) % 2 == 0) {
+					document.write('Verified Successfully..');
+				} else {
+					lblError.innerHTML = 'Not an Even Number'.fontcolor('red');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<section>
+			<h1>Verify Even Number</h1>
+			<div>
+				<input placeholder="Enter Even Number" type="text" id="txtEven" /><button onclick="VerifyClick()">
+					Verify
+				</button>
+			</div>
+			<div id="lblError"></div>
+		</section>
+	</body>
+</html>
